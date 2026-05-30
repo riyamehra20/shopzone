@@ -1,13 +1,81 @@
-[View Deployed App](https://shopxzone.netlify.app/shop)
+# ShopZone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern multi-route E-Commerce SPA built with React and React Router DOM.
 
-Currently, two official plugins are available:
+##  Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+ **[View Deployed App]
+ (https://shopzone-bay-omega.vercel.app/)**
+---
 
+## Features
 
-## Expanding the ESLint configuration
+-  Home page with welcome banner
+-  Shop page with product grid (fetched from DummyJSON API)
+-  Product detail page with dynamic routing (`/product/:id`)
+-  Contact form UI
+-  Global cart with Context API (no prop drilling)
+-  No page reloads — true SPA experience
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+##  Project Structure
+
+```
+src/
+├── context/
+│   └── CartContext.jsx       # Global cart state
+├── pages/
+│   ├── Home.jsx              # Route: /
+│   ├── Shop.jsx              # Route: /shop
+│   ├── ProductDetail.jsx     # Route: /product/:id
+│   └── Contact.jsx           # Route: /contact
+├── components/
+│   ├── Navbar.jsx
+│   ├── ProductCard.jsx
+│   └── Cart.jsx
+├── App.jsx                   # BrowserRouter + Routes
+└── main.jsx
+```
+
+---
+
+##  Tech Stack
+
+| Tech | Purpose |
+|------|---------|
+| React 18 | UI Framework |
+| React Router DOM | Client-side routing |
+| Context API | Global state (cart) |
+| DummyJSON API | Product data source |
+| Vite | Build tool |
+| Netlify | Hosting |
+
+---
+
+##  Run Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/YOUR_USERNAME/shopzone.git
+
+# Go into the folder
+cd shopzone
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+```
+
+---
+
+## API Used
+
+**Base URL:** `https://dummyjson.com`
+
+## Author
+
+Made by **Riya Mehra**  
+GitHub: [@riyamehra20](https://github.com/riyamehra20)
